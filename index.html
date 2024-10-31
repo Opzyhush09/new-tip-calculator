@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Main-container">
+        <header>
+            <img src="images/logo.svg" alt="Tip Calculator Logo">
+        </header>
+        <main class="Calculator-container">
+            <div class="input-section">
+                <div class="input-group">
+                    <!-- BILL INPUT -->
+                   <label for="bill" class="sub-label">Bill</label> 
+                   <img class="images-icond" src="images/icon-dollar.svg" alt="">
+                   <span class="money-image"></span>
+                   <input aria-colspan="bill-label" type="number" id="bill" class="bill input-field"  placeholder="0" min="0">
+                    
+                </div>
+
+                <!-- TIP PERCENTAGE INPUT -->
+                <div class="input-group">
+                    <label for="custom-tip" id="custom-tip" class="sub-label-tip" >Select Tip %</label>
+                    <div class="tip-button">
+                        <button class="tip-btn" data-tip="5">5%</button>
+                        <button class="tip-btn" data-tip="10">10%</button>
+                        <button class="tip-btn" data-tip="15">15%</button>
+                        <button class="tip-btn" data-tip="25">25%</button>
+                        <button class="tip-btn" data-tip="50">50%</button>
+                        <input class="custom-tip" type="number" id="custom-tip" placeholder="Custom" min="0">
+                    </div>
+                </div>
+
+                <!-- NUMBER OF PEOPLE INPUT -->
+                <div class="input-group">
+                    <label for="people" class="sub-label-N">Number of People</label>
+                    <img class="images-icon" src="images/icon-person.svg" alt="Number of people icon">
+                    <span class="people-image"></span>
+                    <input class="people input-field-nd" type="number" id="people" placeholder="0">
+                    <small class="error" id="error" style="display: none;">Can't be Zero</small>
+                </div>                
+            </div>
+
+            <!-- Right Section (Result) -->
+            <div class="Result-section">
+                <div class="result-group">
+                    <p>Tip Amount <br><span class="sub-person"> /person</span></p>
+                    <h2 id="tip-amount">$0.00</h2>
+                </div>
+
+                <div class="result-group">
+                    <p>Total <br> <span class="sub-person">/person</span></p>
+                    <h2 id="total-amount">$0.00</h2>
+                </div>
+                <button class="reset-btn" id="reset-btn">RESET</button>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="index.js"></script>
+</body>
+</html>
